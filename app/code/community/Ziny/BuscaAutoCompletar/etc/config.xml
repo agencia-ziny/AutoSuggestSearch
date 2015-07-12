@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Busca Auto Completar
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ziny
+ * @package    BuscaAutoCompletar
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
+ */
+-->
+<config>
+    <modules>
+        <Ziny_BuscaAutoCompletar>
+            <version>1.0.0</version>
+        </Ziny_BuscaAutoCompletar>
+    </modules>
+    <frontend>
+        <routers>
+            <buscaautocompletar>
+                <use>standard</use>
+                <args>
+                    <module>Ziny_BuscaAutoCompletar</module>
+                    <frontName>buscaautocompletar</frontName>
+                </args>
+            </buscaautocompletar>
+        </routers>
+        <layout>
+            <updates>
+                <buscaautocompletar>
+                    <file>ziny/buscaautocompletar.xml</file>
+                </buscaautocompletar>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Ziny_BuscaAutoCompletar>
+                            <title>Busca Auto Completar Module</title>
+                            <sort_order>10</sort_order>
+                        </Ziny_BuscaAutoCompletar>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <buscaautocompletar translate="title" module="buscaautocompletar">
+                                            <title>Busca Auto Completar</title>
+                                            <sort_order>100</sort_order>
+                                        </buscaautocompletar>			
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <buscaautocompletar>
+                    <file>buscaautocompletar.xml</file>
+                </buscaautocompletar>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Ziny_BuscaAutoCompletar>
+                    <files>
+                        <default>Ziny_BuscaAutoCompletar.csv</default>
+                    </files>
+                </Ziny_BuscaAutoCompletar>
+            </modules>
+        </translate>
+    </adminhtml>   
+    <global>
+        <models>
+            <buscaautocompletar>
+                <class>Ziny_BuscaAutoCompletar_Model</class>
+                <resourceModel>buscaautocompletar_mysql4</resourceModel>
+            </buscaautocompletar>
+        </models>
+        <blocks>
+            <buscaautocompletar>
+                <class>Ziny_BuscaAutoCompletar_Block</class>
+            </buscaautocompletar>
+        </blocks>
+        <helpers>
+            <buscaautocompletar>
+                <class>Ziny_BuscaAutoCompletar_Helper</class>
+            </buscaautocompletar>
+        </helpers>
+    </global>
+    <default>
+        <buscaautocompletar>
+            <settings>
+                <border_color>#ccc</border_color>
+                <border_width>1</border_width>
+                <hover_background>#fff</hover_background>
+            </settings>
+            <suggest>
+                <enable>1</enable>
+                <suggest_color>#fff</suggest_color>
+                <background>#0A263D</background>
+                <count_color>#ff0</count_color>
+            </suggest>
+            <category>
+                <enable>1</enable>
+                <number_category>4</number_category>
+                <background>#fff</background>
+                <background_hover>#eee</background_hover>
+                <title_color>#333</title_color>
+            </category>
+            <preview>
+                <enable>1</enable>
+                <number_product>5</number_product>
+                <show_image>1</show_image>
+                <show_name>1</show_name>
+                <show_description>1</show_description>
+                <num_char_description>100</num_char_description>
+                <pro_description_color>#777</pro_description_color>
+                <background>#fff</background>
+                <pro_title_color>#555</pro_title_color>
+                <image_width>50</image_width>
+                <image_height>50</image_height>
+                <image_border_width>1</image_border_width>
+                <image_border_color>#ddd</image_border_color>
+            </preview>
+        </buscaautocompletar>
+    </default>
+</config>
