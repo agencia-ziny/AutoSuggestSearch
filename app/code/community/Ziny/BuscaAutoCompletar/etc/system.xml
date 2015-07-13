@@ -20,7 +20,7 @@
 <config>
     <tabs>
         <buscaautocompletar translate="label" module="buscaautocompletar">
-            <label>Search Auto Suggest</label>
+            <label>Auto Suggest Search</label>
             <sort_order>201</sort_order>
         </buscaautocompletar>
     </tabs>
@@ -230,38 +230,45 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </titulo_cor>
+                        <titulo_tamanho translate="label comment">
+                            <label>Product Name Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </titulo_tamanho>
                         <descricao_cor translate="label comment">
                             <label>Product Description Color</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>9</sort_order>
+                            <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </descricao_cor>
                         <imagem_largura translate="label comment">
                             <label>Thumnail Width (px)</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>10</sort_order>
+                            <sort_order>11</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </imagem_largura>
                         <imagem_altura translate="label comment">
                             <label>Thumnail Height (px)</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>11</sort_order>
+                            <sort_order>12</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </imagem_altura>
                         <imagem_borda_largura translate="label comment">
                             <label>Image Border Width (px)</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>12</sort_order>
+                            <sort_order>13</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </imagem_borda_largura>
                         <imagem_borda_cor translate="label comment">
                             <label>Image Border Color</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>13</sort_order>
+                            <sort_order>14</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </imagem_borda_cor>

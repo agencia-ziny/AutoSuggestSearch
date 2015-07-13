@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_BuscaAutoCompletar>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Ziny_BuscaAutoCompletar>
     </modules>
     <frontend>
@@ -50,7 +50,7 @@
                 <admin>
                     <children>
                         <Ziny_BuscaAutoCompletar>
-                            <title>Search Auto Suggest</title>
+                            <title>Auto Suggest Search</title>
                             <sort_order>10</sort_order>
                         </Ziny_BuscaAutoCompletar>
                         <system>
@@ -114,21 +114,21 @@
             <sugestao>
                 <ativo>1</ativo>
                 <sugestao_cor>#fff</sugestao_cor>
-                <background>#f05</background>
-                <total_cor>#ff0</total_cor>
+                <background>#3399cc</background>
+                <total_cor>#fff</total_cor>
             </sugestao>
             <categoria>
                 <ativa>1</ativa>
                 <number_category>4</number_category>
-                <esconde_categoria>Default Store</esconde_categoria>
+                <esconde_categoria>Default Category</esconde_categoria>
                 <background>#fff</background>                
-                <background_hover>#eee</background_hover>
+                <hover_fundo>#eee</hover_fundo>
                 <titulo_cor>#333</titulo_cor>
                 <total_cor>#fff</total_cor>
             </categoria>
             <resultado>
                 <ativo>1</ativo>
-                <qtd_produtos>5</qtd_produtos>
+                <qtd_produtos>4</qtd_produtos>
                 <exibir_imagem>1</exibir_imagem>
                 <exibir_nome>1</exibir_nome>
                 <exibir_descricao>1</exibir_descricao>
@@ -136,6 +136,7 @@
                 <descricao_cor>#888</descricao_cor>
                 <background>#fff</background>
                 <titulo_cor>#555</titulo_cor>
+                <titulo_tamanho>14</titulo_tamanho>
                 <imagem_largura>50</imagem_largura>
                 <imagem_altura>50</imagem_altura>
                 <imagem_borda_largura>1</imagem_borda_largura>

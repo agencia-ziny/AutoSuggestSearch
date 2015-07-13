@@ -65,7 +65,7 @@ header("Content-type: text/css; charset: UTF-8");
     margin:3px 6px 3px 0;
     border:solid <?php echo $result['imagem_borda_largura']; ?>px <?php echo $result['imagem_borda_cor']; ?>
 }
-._autobuscacompletar li.selected {
+._autobuscacompletar li.selected, ._autobuscacompletar li:hover {
     background-color:<?php echo $config['hover_fundo']; ?>;
     text-decoration:none
 }
@@ -85,6 +85,6 @@ header("Content-type: text/css; charset: UTF-8");
 ._autobuscacompletar li._categoria {
     background-color:<?php echo $catego['background']; ?>
 }
-._autobuscacompletar li._categoria.selected {
+._autobuscacompletar li._categoria.selected, ._autobuscacompletar li._categoria:hover {
     background-color:<?php echo $catego['hover_fundo']; ?>
 }

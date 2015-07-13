@@ -23,7 +23,7 @@ $_sugestoes = Mage::helper('catalogsearch')->getSuggestCollection();
     <li class="_esconde"></li>
     <?php if (count($_categoria) && $this->categoriaAtiva()): ?>
         <?php foreach ($_categoria as $categoria): ?>
-            <?php if (!$this->categoriaOculta($categoria['titulo'])): ?>
+            <?php if ($this->categoriaOculta($categoria['titulo'])): ?>
                 <li class="_categoria">
                     <a href="<?php echo $categoria['url']; ?>">
                         <span class="_titulo"><?php echo $categoria['titulo'] ?></span>
