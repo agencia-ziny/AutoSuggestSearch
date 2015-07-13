@@ -30,14 +30,14 @@
             </action>
         </reference>
     </default>
-    <buscaautocompletar_suggest_result>
+    <buscaautocompletar_sugestao_resultado>
         <reference name="root">
             <action method="setTemplate">
                 <template>ziny/buscaautocompletar/blank.phtml</template>
             </action>
         </reference>
         <reference name="content">
-            <block type="buscaautocompletar/suggest" name="buscaautocompletar" template="ziny/buscaautocompletar/suggest.phtml" />
+            <block type="buscaautocompletar/sugestao" name="buscaautocompletar" template="ziny/buscaautocompletar/sugestao.phtml" />
         </reference>
-    </buscaautocompletar_suggest_result>
+    </buscaautocompletar_sugestao_resultado>
 </layout>

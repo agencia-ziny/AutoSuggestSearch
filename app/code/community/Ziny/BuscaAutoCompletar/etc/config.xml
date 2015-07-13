@@ -50,7 +50,7 @@
                 <admin>
                     <children>
                         <Ziny_BuscaAutoCompletar>
-                            <title>Busca Auto Completar Module</title>
+                            <title>Search Auto Suggest</title>
                             <sort_order>10</sort_order>
                         </Ziny_BuscaAutoCompletar>
                         <system>
@@ -58,7 +58,7 @@
                                 <config>
                                     <children>
                                         <buscaautocompletar translate="title" module="buscaautocompletar">
-                                            <title>Busca Auto Completar</title>
+                                            <title>Search Auto Suggest</title>
                                             <sort_order>100</sort_order>
                                         </buscaautocompletar>			
                                     </children>
@@ -106,39 +106,41 @@
     </global>
     <default>
         <buscaautocompletar>
-            <settings>
-                <border_color>#ccc</border_color>
-                <border_width>1</border_width>
-                <hover_background>#fff</hover_background>
-            </settings>
-            <suggest>
-                <enable>1</enable>
-                <suggest_color>#fff</suggest_color>
-                <background>#0A263D</background>
-                <count_color>#ff0</count_color>
-            </suggest>
-            <category>
-                <enable>1</enable>
+            <definicoes>
+                <borda_cor>#ccc</borda_cor>
+                <borda_largura>1</borda_largura>
+                <hover_fundo>#fff</hover_fundo>
+            </definicoes>
+            <sugestao>
+                <ativo>1</ativo>
+                <sugestao_cor>#fff</sugestao_cor>
+                <background>#f05</background>
+                <total_cor>#ff0</total_cor>
+            </sugestao>
+            <categoria>
+                <ativa>1</ativa>
                 <number_category>4</number_category>
-                <background>#fff</background>
+                <esconde_categoria>Default Store</esconde_categoria>
+                <background>#fff</background>                
                 <background_hover>#eee</background_hover>
-                <title_color>#333</title_color>
-            </category>
-            <preview>
-                <enable>1</enable>
-                <number_product>5</number_product>
-                <show_image>1</show_image>
-                <show_name>1</show_name>
-                <show_description>1</show_description>
-                <num_char_description>100</num_char_description>
-                <pro_description_color>#777</pro_description_color>
+                <titulo_cor>#333</titulo_cor>
+                <total_cor>#fff</total_cor>
+            </categoria>
+            <resultado>
+                <ativo>1</ativo>
+                <qtd_produtos>5</qtd_produtos>
+                <exibir_imagem>1</exibir_imagem>
+                <exibir_nome>1</exibir_nome>
+                <exibir_descricao>1</exibir_descricao>
+                <qtd_descricao>100</qtd_descricao>
+                <descricao_cor>#777</descricao_cor>
                 <background>#fff</background>
-                <pro_title_color>#555</pro_title_color>
-                <image_width>50</image_width>
-                <image_height>50</image_height>
-                <image_border_width>1</image_border_width>
-                <image_border_color>#ddd</image_border_color>
-            </preview>
+                <titulo_cor>#555</titulo_cor>
+                <imagem_largura>50</imagem_largura>
+                <imagem_altura>50</imagem_altura>
+                <imagem_borda_largura>1</imagem_borda_largura>
+                <imagem_borda_cor>#ddd</imagem_borda_cor>
+            </resultado>
         </buscaautocompletar>
     </default>
 </config>

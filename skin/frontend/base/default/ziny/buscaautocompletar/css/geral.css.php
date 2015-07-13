@@ -24,45 +24,67 @@ require_once MAGENTO_ROOT . 'app/Mage.php';
 umask(0);
 Mage::app();
 
-$config = Mage::getStoreConfig('buscaautocompletar/settings');
-$sugere = Mage::getStoreConfig('searchautocomplete/suggest');
-$result = Mage::getStoreConfig('searchautocomplete/preview');
-$catego = Mage::getStoreConfig('searchautocomplete/categoria');
+$config = Mage::getStoreConfig('buscaautocompletar/definicoes');
+$sugere = Mage::getStoreConfig('buscaautocompletar/sugestao');
+$result = Mage::getStoreConfig('buscaautocompletar/resultado');
+$catego = Mage::getStoreConfig('buscaautocompletar/categoria');
 
 header("Content-type: text/css; charset: UTF-8");
 ?>
-._autobuscacompletar {
-    border:solid <?php echo $config['border_width']; ?>px
+._esconde {
+    display:none
 }
-._autobuscacompletar ._sugestao {
-    background:<?php echo $sugere['background']; ?>; 
-    color:<?php echo $sugere['suggest_color']; ?>
+._autobuscacompletar {
+    border:solid <?php echo $config['borda_largura']; ?>px
+}
+._autobuscacompletar ._sugestoes {
+    background-color:<?php echo $sugere['background']; ?>;
+}
+._autobuscacompletar ._sugestao { 
+    color:<?php echo $sugere['sugestao_cor']; ?>
 }
 ._autobuscacompletar ._sugestao ._total {
-    color:<?php echo $sugere['count_color']; ?>
+    color:<?php echo $sugere['total_cor']; ?>
 }
 ._autobuscacompletar ._resultado { 
-    background:<?php echo $result['background']; ?>
+    background-color:<?php echo $result['background']; ?>
 }
 ._autobuscacompletar ._resultado:after {
     content: "";
     display: table;
     clear: both;
 }
-._autobuscacompletar ._resultado a {
-    color:<?php echo $result['pro_title_color']; ?>
-}
-._autobuscacompletar ._resultado ._titulo {
+._autobuscacompletar ._resultado a span._titulo, ._autobuscacompletar ._resultado a {
     color:<?php echo $result['titulo_cor']; ?>
 }
-._autobuscacompletar ._resultado ._descricao {
-    color:<?php echo $result['pro_description_color']; ?>
+._autobuscacompletar ._resultado span._descricao {
+    color:<?php echo $result['descricao_cor']; ?>
 }
 ._autobuscacompletar ._resultado img {
-    float:left; 
-    border:solid <?php echo $result['image_border_width']; ?>px <?php echo $result['image_border_color']; ?>
+    float:left;
+    margin:3px 6px 3px 0;
+    border:solid <?php echo $result['imagem_borda_largura']; ?>px <?php echo $result['imagem_borda_cor']; ?>
 }
-.header .form-search ._autobuscacompletar li.selected {
-    background-color:<?php echo $config['hover_background']; ?>
+._autobuscacompletar li.selected {
+    background-color:<?php echo $config['hover_fundo']; ?>;
+    text-decoration:none
 }
-        
+._autobuscacompletar ._total {
+    float: right;
+}
+._autobuscacompletar li._categoria a span._titulo, ._autobuscacompletar li._categoria a {
+    color:<?php echo $catego['titulo_cor']; ?>;
+    text-decoration:none
+}
+._autobuscacompletar li._categoria ._total {
+    color:<?php echo $catego['total_cor']; ?>
+}
+._autobuscacompletar li._categoria {
+    background-color:<?php echo $catego['hover_fundo']; ?>
+}
+._autobuscacompletar li._categoria {
+    background-color:<?php echo $catego['background']; ?>
+}
+._autobuscacompletar li._categoria.selected {
+    background-color:<?php echo $catego['hover_fundo']; ?>
+}

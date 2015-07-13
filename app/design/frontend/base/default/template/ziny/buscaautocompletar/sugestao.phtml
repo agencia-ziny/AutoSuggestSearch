@@ -1,0 +1,62 @@
+<?php
+/**
+ * Busca Auto Completar
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ziny
+ * @package    BuscaAutoCompletar
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
+ */
+$_resultado = $this->sugestoesProdutos();
+$_categoria = $this->sugestoesCategorias();
+$_sugestoes = Mage::helper('catalogsearch')->getSuggestCollection();
+?>
+<ul class="_autobuscacompletar">
+    <li class="_esconde"></li>
+    <?php if (count($_categoria) && $this->categoriaAtiva()): ?>
+        <?php foreach ($_categoria as $categoria): ?>
+            <?php if (!$this->categoriaOculta($categoria['titulo'])): ?>
+                <li class="_categoria">
+                    <a href="<?php echo $categoria['url']; ?>">
+                        <span class="_titulo"><?php echo $categoria['titulo'] ?></span>
+                        <span class="_total"><?php echo count($categoria[0]); ?></span>
+                    </a>
+                </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <?php if ($this->sugestaoAtiva()): ?>
+        <?php foreach ($_sugestoes as $_sugestao): ?>
+            <li class="_sugestoes">
+                <span class="_sugestao"><?php echo $_sugestao->getQueryText(); ?></span>
+                <span class="_total"><?php echo $_sugestao->getNumResults(); ?></span>
+            </li>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <?php if ($_resultado->count() && $this->resultadoAtivo()): ?>
+        <?php foreach ($_resultado as $resultado): ?>
+            <li class="_resultado">
+                <a href="<?php echo $resultado->getProductUrl(); ?>">
+                    <?php if ($this->imagemAtiva()): ?>
+                        <img alt="" src="<?php echo $this->helper('catalog/image')->init($resultado, 'small_image')->resize($this->imagemLargura(), $this->imagemAltura()); ?>" />
+                    <?php endif; ?>
+                    <?php if ($this->nomeAtivo()): ?>
+                        <span class="_titulo"><?php echo $resultado->getName(); ?></span>
+                    <?php endif; ?>
+                    <?php if ($this->descricaoAtiva()): ?>
+                        <?php $descricao = substr($resultado->getDescription(), 0, $this->qtdDescricao()); ?>
+                        <span class="_descricao"><?php strip_tags(substr($descricao, 0, strrpos($descricao, ' '))); ?>...</span>
+                    <?php endif; ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</ul>

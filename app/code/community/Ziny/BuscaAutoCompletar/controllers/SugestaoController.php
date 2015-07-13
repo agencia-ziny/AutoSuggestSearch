@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Busca Auto Completar
  *
@@ -16,12 +15,12 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
-class Ziny_BuscaAutoCompletar_Helper_Data extends Mage_Core_Helper_Abstract {
+class Ziny_BuscaAutoCompletar_SugestaoController extends Mage_Core_Controller_Front_Action {
 
-    public function getSugestaoUrl() {
+    public function resultadoAction() {
 
-        return $this->_getUrl('buscaautocompletar/sugestao/resultado', array('_secure' => Mage::app()->getFrontController()->getRequest()->isSecure()
-        ));
+        $this->loadLayout();
+        $this->renderLayout();
     }
 
 }
