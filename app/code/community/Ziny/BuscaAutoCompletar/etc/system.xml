@@ -21,7 +21,7 @@
     <tabs>
         <buscaautocompletar translate="label" module="buscaautocompletar">
             <label>Auto Suggest Search</label>
-            <sort_order>201</sort_order>
+            <sort_order>202</sort_order>
         </buscaautocompletar>
     </tabs>
     <sections>
