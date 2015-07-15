@@ -17,7 +17,7 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="1.0.1">
+<layout version="1.0.2">
     <default>
         <reference name="head">
             <action method="addCss">

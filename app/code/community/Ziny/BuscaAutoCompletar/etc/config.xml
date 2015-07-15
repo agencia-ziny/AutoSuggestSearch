@@ -12,15 +12,15 @@
  *
  * @category   Ziny
  * @package    BuscaAutoCompletar
- * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Agência Ziny <dev@agenciaziny.com.br>
+ * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
  */
 -->
 <config>
     <modules>
         <Ziny_BuscaAutoCompletar>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </Ziny_BuscaAutoCompletar>
     </modules>
     <frontend>
@@ -51,6 +51,30 @@
                 </Ziny_BuscaAutoCompletar>
             </modules>
         </translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <Ziny_BuscaAutoCompletar>
+                            <title>Auto Suggest Search</title>
+                            <sort_order>202</sort_order>
+                        </Ziny_BuscaAutoCompletar>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <buscaautocompletar translate="title" module="buscaautocompletar">
+                                            <title>Auto Suggest Search</title>
+                                            <sort_order>202</sort_order>
+                                        </buscaautocompletar>			
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
     </adminhtml>   
     <global>
         <models>
