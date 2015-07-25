@@ -1,4 +1,4 @@
-# Magento extension: Auto Suggest Search
+# [Magento extension: Auto Suggest Search](http://www.magentocommerce.com/magento-connect/auto-suggest-search.html)
 ###Improve the search experience! Receive products, categories suggestions and the product thumbnail at search.
 
 Improve the search experience of your customers on your online store! Using this module, your visitors will receive products, categories suggestions (with the number of results) and the product thumbnail at every search.
@@ -37,7 +37,7 @@ Test it! Your search results will never be the same after the improvements did b
 **Note:** The sample images use theme and database of the Magento Simple Data.
 
 #### For more information, download and install
-Please see on **Magento Connect**
+Please see on [**Magento Connect**](http://www.magentocommerce.com/magento-connect/auto-suggest-search.html)
 
 ####Having Issues?
 
