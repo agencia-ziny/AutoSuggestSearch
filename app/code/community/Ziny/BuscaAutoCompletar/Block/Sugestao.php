@@ -50,9 +50,9 @@ class Ziny_BuscaAutoCompletar_Block_Sugestao extends Mage_Core_Block_Template {
 
         $resultados->addAttributeToFilter('visibility', array('neq' => 1));
 
-        if (Mage::getStoreConfig('buscaautocompletar/resultado/qtd_produtos')) {
+        if (Mage::getStoreConfig('buscaautocompletar/resultado/total_produtos')) {
 
-            $resultados->setPageSize(Mage::getStoreConfig('buscaautocompletar/resultado/qtd_produtos'));
+            $resultados->setPageSize(Mage::getStoreConfig('buscaautocompletar/resultado/total_produtos'));
         } else {
             $resultados->setPageSize(5);
         }
@@ -69,13 +69,13 @@ class Ziny_BuscaAutoCompletar_Block_Sugestao extends Mage_Core_Block_Template {
 
         $categories = Mage::getModel('catalog/category')->getCollection();
 
-        foreach ($categories as $cat) {
+        foreach ($categories as $totals => $cat) {
 
             $temp = null;
             $_temp = null;
             $are = false;
             $_cat = $cat->load();
-            
+
             $temp['titulo'] = $_cat->getName();
             $temp['url'] = $_cat->getUrl();
 
@@ -83,10 +83,8 @@ class Ziny_BuscaAutoCompletar_Block_Sugestao extends Mage_Core_Block_Template {
 
             $prod->addAttributeToFilter('visibility', array('neq' => 1));
 
-            $prod->setPageSize(5);
-
             foreach ($prod as $p) {
-                
+
                 $_temp[] = $p->load();
                 $are = true;
             }
@@ -98,13 +96,25 @@ class Ziny_BuscaAutoCompletar_Block_Sugestao extends Mage_Core_Block_Template {
         return $resultado;
     }
 
+    public function categoriaOculta($categoria) {
+
+        $dados = Mage::getStoreConfig('buscaautocompletar/categoria/esconde_categoria');
+        $lista = array_map('trim', explode(',', $dados));
+
+        if (!in_array(trim($categoria), $lista)) {
+
+            return true;
+        }
+        return false;
+    }
+
     public function sugestaoAtiva() {
 
         return Mage::getStoreConfig('buscaautocompletar/sugestao/ativo');
     }
-    
-    public function categoriaAtiva(){
-        
+
+    public function categoriaAtiva() {
+
         return Mage::getStoreConfig('buscaautocompletar/categoria/ativa');
     }
 
@@ -132,7 +142,7 @@ class Ziny_BuscaAutoCompletar_Block_Sugestao extends Mage_Core_Block_Template {
 
         return Mage::getStoreConfig('buscaautocompletar/resultado/exibir_nome');
     }
-	
+
     public function descricaoAtiva() {
 
         return Mage::getStoreConfig('buscaautocompletar/resultado/exibir_descricao');
@@ -152,16 +162,20 @@ class Ziny_BuscaAutoCompletar_Block_Sugestao extends Mage_Core_Block_Template {
 
         return Mage::getStoreConfig('buscaautocompletar/resultado/imagem_borda_cor');
     }
-    
-    public function categoriaOculta($categoria) {
-        
-        $dados = Mage::getStoreConfig('buscaautocompletar/categoria/esconde_categoria');
-        $lista = array_map('trim', explode(',', $dados));
-        
-        if (!in_array(trim($categoria), $lista)){
-            
-            return true;
+
+    public function categoriasParaExibir($contagem, $marcada = 3) {
+
+        if (Mage::getStoreConfig('buscaautocompletar/categoria/total_categorias')) {
+
+            $marcada = Mage::getStoreConfig('buscaautocompletar/categoria/total_categorias');
         }
-        return false;
+
+        if (intval($contagem) >= intval($marcada)) {
+
+            return false;
+        }
+
+        return true;
     }
+
 }

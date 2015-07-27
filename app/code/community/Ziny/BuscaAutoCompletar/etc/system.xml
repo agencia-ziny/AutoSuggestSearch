@@ -12,9 +12,9 @@
  *
  * @category   Ziny
  * @package    BuscaAutoCompletar
- * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Agência Ziny <dev@agenciaziny.com.br>
+ * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
  */
 -->
 <config>
@@ -41,49 +41,132 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-						<ativo translate="">
+                        <ativo translate="label comment">
                             <label>Enable</label>
+                            <comment>Define if module is active</comment>
                             <frontend_type>select</frontend_type>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                         </ativo>
-                        <borda_cor translate="">
+                        <borda_cor translate="label comment">
                             <label>Border Color</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </borda_cor>
-                        <borda_largura translate="">
+                        <borda_largura translate="label comment">
                             <label>Border Width (px)</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </borda_largura>
-                        <hover_fundo translate="">
-                            <label>Hover Background</label>
+                        <cor_fundo translate="label comment">
+                            <label>Box Background</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                        </hover_fundo>
+                        </cor_fundo>
                     </fields>
                 </definicoes>
-                <sugestao translate="label">
-                    <label>Suggest</label>
-                    <frontend_type>text</frontend_type>
+                <categoria translate="label comment">
+                    <label>Category Preview</label>
                     <sort_order>2</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <ativo translate="">
+                        <ativa translate="label comment">
                             <label>Enable</label>
+                            <comment>Define if display category results</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </ativa>
+                        <total_categorias translate="label comment">
+                            <label>Number Category to Show</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </total_categorias>
+                        <esconde_categoria translate="label comment">
+                            <label>Hidden these Categories</label>
+                            <comment>Insert the category names to be hidden (Separated with comma)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </esconde_categoria>
+                        <background translate="label comment">
+                            <label>Background</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </background>
+                        <hover_fundo translate="label comment">
+                            <label>Background Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </hover_fundo>
+                        <titulo_cor translate="label comment">
+                            <label>Category Name Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </titulo_cor>
+                        <titulo_cor_hover translate="label comment">
+                            <label>Category Name Color Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </titulo_cor_hover>
+                        <total_cor translate="label comment">
+                            <label>Category Count Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </total_cor>
+                        <total_cor_hover translate="label comment">
+                            <label>Category Count Color Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </total_cor_hover>
+                    </fields>
+                </categoria>
+                <sugestao translate="label">
+                    <label>Suggest</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <ativo translate="label comment">
+                            <label>Enable</label>
+                            <comment>Define if display suggest result</comment>
                             <frontend_type>select</frontend_type>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
@@ -93,93 +176,53 @@
                         <background translate="">
                             <label>Background</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </background>
-                        <sugestao_cor translate="">
-                            <label>Suggest Color</label>
+                        <background_hover translate="">
+                            <label>Background Hover</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </background_hover>
+                        <sugestao_cor translate="">
+                            <label>Suggest Font Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </sugestao_cor>
+                        <sugestao_cor_hover translate="">
+                            <label>Suggest Font Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </sugestao_cor_hover>
                         <total_cor translate="label comment">
                             <label>Count Color</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
-                            <sort_order>4</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                        </total_cor>
-                    </fields>
-                </sugestao>
-                <categoria translate="label comment">
-                    <label>Category Preview</label>
-                    <sort_order>3</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-                        <ativa translate="label comment">
-                            <label>Enable</label>
-                            <frontend_type>select</frontend_type>
-                            <sort_order>1</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                        </ativa>
-                        <number_category translate="label comment">
-                            <label>Number Category Show</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>2</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                        </number_category>
-                        <esconde_categoria translate="label comment">
-                            <label>Hidden these Categories</label>
-                            <comment>Insert the category names to be hidden (Separated with comma)</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>2</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                        </esconde_categoria>
-                        <background translate="label comment">
-                            <label>Background</label>
-                            <frontend_type>text</frontend_type>
-							<validate>color</validate>
-                            <sort_order>3</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                        </background>
-                        <hover_fundo translate="label comment">
-                            <label>Background Hover</label>
-                            <frontend_type>text</frontend_type>
-							<validate>color</validate>
-                            <sort_order>4</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                        </hover_fundo>
-                        <titulo_cor translate="label comment">
-                            <label>Category Name Color</label>
-                            <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                        </titulo_cor>
-                        <total_cor translate="label comment">
-                            <label>Category Count Color</label>
+                        </total_cor>
+                        <total_cor_hover translate="label comment">
+                            <label>Count Color Hover</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                        </total_cor>
+                        </total_cor_hover>
                     </fields>
-                </categoria>
+                </sugestao>                
                 <resultado translate="label">
                     <label>Product Preview</label>
                     <sort_order>4</sort_order>
@@ -195,13 +238,13 @@
                             <show_in_website>1</show_in_website>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                         </ativo>
-                        <qtd_produtos translate="label comment">
+                        <total_produtos translate="label comment">
                             <label>Number Product Show</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                        </qtd_produtos>
+                        </total_produtos>
                         <exibir_imagem translate="label comment">
                             <label>Show Product Image</label>
                             <frontend_type>select</frontend_type>
@@ -236,19 +279,35 @@
                         <background translate="label comment">
                             <label>Background</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </background>
+                        <background_hover translate="label comment">
+                            <label>Background Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </background_hover>
                         <titulo_cor translate="label comment">
                             <label>Product Name Color</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>8</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </titulo_cor>
+                        <titulo_cor_hover translate="label comment">
+                            <label>Product Name Color Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </titulo_cor_hover>
                         <titulo_tamanho translate="label comment">
                             <label>Product Name Size</label>
                             <frontend_type>text</frontend_type>
@@ -257,13 +316,21 @@
                             <show_in_website>1</show_in_website>
                         </titulo_tamanho>
                         <descricao_cor translate="label comment">
-                            <label>Product Description Color</label>
+                            <label>Description Color</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                         </descricao_cor>
+                        <descricao_cor_hover translate="label comment">
+                            <label>Description Color Hover</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </descricao_cor_hover>
                         <imagem_largura translate="label comment">
                             <label>Thumnail Width (px)</label>
                             <frontend_type>text</frontend_type>
@@ -288,7 +355,7 @@
                         <imagem_borda_cor translate="label comment">
                             <label>Image Border Color</label>
                             <frontend_type>text</frontend_type>
-							<validate>color</validate>
+                            <validate>color</validate>
                             <sort_order>14</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>

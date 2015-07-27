@@ -11,9 +11,9 @@
  *
  * @category   Ziny
  * @package    BuscaAutoCompletar
- * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @copyright  Copyright (c) 2015 AgÃªncia Ziny (www.agenciaziny.com.br)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author     Agência Ziny <dev@agenciaziny.com.br>
+ * @author     AgÃªncia Ziny <dev@agenciaziny.com.br>
  */
 $_resultado = $this->sugestoesProdutos();
 $_categoria = $this->sugestoesCategorias();
@@ -22,8 +22,8 @@ $_sugestoes = Mage::helper('catalogsearch')->getSuggestCollection();
 <ul class="_autobuscacompletar">
     <li class="_esconde"></li>
     <?php if (count($_categoria) && $this->categoriaAtiva()): ?>
-        <?php foreach ($_categoria as $categoria): ?>
-            <?php if ($this->categoriaOculta($categoria['titulo'])): ?>
+        <?php foreach ($_categoria as $contagem1 => $categoria): ?>
+            <?php if ($this->categoriasParaExibir($contagem1) && $this->categoriaOculta($categoria['titulo'])): ?>
                 <li class="_categoria">
                     <a href="<?php echo $categoria['url']; ?>">
                         <span class="_titulo"><?php echo $categoria['titulo'] ?></span>
@@ -33,11 +33,13 @@ $_sugestoes = Mage::helper('catalogsearch')->getSuggestCollection();
             <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
-    <?php if ($this->sugestaoAtiva()): ?>
-        <?php foreach ($_sugestoes as $_sugestao): ?>
+    <?php if (count($_sugestoes) && $this->sugestaoAtiva()): ?>
+        <?php foreach ($_sugestoes as $contagem2 => $_sugestao): ?>
             <li class="_sugestoes">
-                <span class="_sugestao"><?php echo $_sugestao->getQueryText(); ?></span>
-                <span class="_total"><?php echo $_sugestao->getNumResults(); ?></span>
+                <a href="<?php echo Mage::getBaseUrl(); ?>catalogsearch/result/?q=<?php echo $_sugestao->getQuery(); ?>">
+                    <span class="_sugestao"><?php echo $_sugestao->getQueryText(); ?></span>
+                    <span class="_total"><?php echo $_sugestao->getNumResults(); ?></span>
+                </a>
             </li>
         <?php endforeach; ?>
     <?php endif; ?>
@@ -46,14 +48,14 @@ $_sugestoes = Mage::helper('catalogsearch')->getSuggestCollection();
             <li class="_resultado">
                 <a href="<?php echo $resultado->getProductUrl(); ?>">
                     <?php if ($this->imagemAtiva()): ?>
-                        <img alt="" src="<?php echo $this->helper('catalog/image')->init($resultado, 'small_image')->resize($this->imagemLargura(), $this->imagemAltura()); ?>" />
+                        <img alt="<?php echo $resultado->getName(); ?>" src="<?php echo $this->helper('catalog/image')->init($resultado, 'small_image')->resize($this->imagemLargura(), $this->imagemAltura()); ?>" />
                     <?php endif; ?>
                     <?php if ($this->nomeAtivo()): ?>
                         <span class="_titulo"><?php echo $resultado->getName(); ?></span>
                     <?php endif; ?>
                     <?php if ($this->descricaoAtiva()): ?>
                         <?php $descricao = substr($resultado->getDescription(), 0, $this->qtdDescricao()); ?>
-                        <span class="_descricao"><?php strip_tags(substr($descricao, 0, strrpos($descricao, ' '))); ?>...</span>
+                        <span class="_descricao"><?php echo strip_tags(substr($descricao, 0, strrpos($descricao, ' '))); ?>...</span>
                     <?php endif; ?>
                 </a>
             </li>

@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_BuscaAutoCompletar>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
         </Ziny_BuscaAutoCompletar>
     </modules>
     <frontend>
@@ -97,36 +97,46 @@
     <default>
         <buscaautocompletar>
             <definicoes>
-                <borda_cor>ccc</borda_cor>
+                <ativo>0</ativo>
+                <borda_cor>3399CC</borda_cor>
                 <borda_largura>1</borda_largura>
-                <hover_fundo>fff</hover_fundo>
-            </definicoes>
-            <sugestao>
-                <ativo>1</ativo>
-                <sugestao_cor>fff</sugestao_cor>
-                <background>3399cc</background>
-                <total_cor>fff</total_cor>
-            </sugestao>
+                <cor_fundo>FFFFFF</cor_fundo>
+            </definicoes>            
             <categoria>
                 <ativa>1</ativa>
-                <number_category>4</number_category>
+                <total_categorias>4</total_categorias>
                 <esconde_categoria>Default Category</esconde_categoria>
-                <background>fff</background>                
-                <hover_fundo>eee</hover_fundo>
-                <titulo_cor>333</titulo_cor>
-                <total_cor>fff</total_cor>
+                <background>FFFFFF</background>                
+                <hover_fundo>EFEFEF</hover_fundo>
+                <titulo_cor>444444</titulo_cor>
+                <titulo_cor_hover>3399CC</titulo_cor_hover>
+                <total_cor>777777</total_cor>
+                <total_cor_hover>3399CC</total_cor_hover>
             </categoria>
-            <resultado>
+            <sugestao>
                 <ativo>1</ativo>
-                <qtd_produtos>4</qtd_produtos>
+                <background>3399CC</background>
+                <background_hover>2D72CC</background_hover>
+                <sugestao_cor>FFFFFF</sugestao_cor>
+                <sugestao_cor_hover>F1F1F1</sugestao_cor_hover>
+                <total_cor>FFFFFF</total_cor>
+                <total_cor_hover>F1F1F1</total_cor_hover>
+            </sugestao>
+            <resultado>
+                <ativo>1</ativo>                
+                <total_produtos>5</total_produtos>
                 <exibir_imagem>1</exibir_imagem>
                 <exibir_nome>1</exibir_nome>
                 <exibir_descricao>1</exibir_descricao>
                 <qtd_descricao>100</qtd_descricao>
-                <descricao_cor>888</descricao_cor>
-                <background>fff</background>
+                <descricao_cor>888888</descricao_cor>
+                <background>FFFFFF</background>
+                <background_hover>FEFEFE</background_hover>
                 <titulo_cor>555</titulo_cor>
+                <titulo_cor_hover>3399CC</titulo_cor_hover>
                 <titulo_tamanho>14</titulo_tamanho>
+                <descricao_cor>999999</descricao_cor>
+                <descricao_cor_hover>3399CC</descricao_cor_hover>
                 <imagem_largura>50</imagem_largura>
                 <imagem_altura>50</imagem_altura>
                 <imagem_borda_largura>1</imagem_borda_largura>

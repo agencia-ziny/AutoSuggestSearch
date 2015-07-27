@@ -20,19 +20,19 @@
 <layout version="1.0.3">
     <default>
         <reference name="head">
-            <action method="addCss">
+            <action method="addCss" ifconfig="buscaautocompletar/definicoes/ativo">
                 <stylesheet>ziny/buscaautocompletar/css/geral.css.php</stylesheet>
             </action>
         </reference>
         <reference name="top.search">
-            <action method="setTemplate">
+            <action method="setTemplate" ifconfig="buscaautocompletar/definicoes/ativo">
                 <template>ziny/buscaautocompletar/topsearch.phtml</template>
             </action>
         </reference>
     </default>
     <buscaautocompletar_sugestao_resultado>
         <reference name="root">
-            <action method="setTemplate">
+            <action method="setTemplate" ifconfig="buscaautocompletar/definicoes/ativo">
                 <template>ziny/buscaautocompletar/blank.phtml</template>
             </action>
         </reference>
