@@ -41,9 +41,18 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+						<ativo translate="">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </ativo>
                         <borda_cor translate="">
                             <label>Border Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -58,6 +67,7 @@
                         <hover_fundo translate="">
                             <label>Hover Background</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -83,6 +93,7 @@
                         <background translate="">
                             <label>Background</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -90,6 +101,7 @@
                         <sugestao_cor translate="">
                             <label>Suggest Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -97,6 +109,7 @@
                         <total_cor translate="label comment">
                             <label>Count Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -136,6 +149,7 @@
                         <background translate="label comment">
                             <label>Background</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -143,6 +157,7 @@
                         <hover_fundo translate="label comment">
                             <label>Background Hover</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -150,6 +165,7 @@
                         <titulo_cor translate="label comment">
                             <label>Category Name Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -157,6 +173,7 @@
                         <total_cor translate="label comment">
                             <label>Category Count Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -219,6 +236,7 @@
                         <background translate="label comment">
                             <label>Background</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -226,6 +244,7 @@
                         <titulo_cor translate="label comment">
                             <label>Product Name Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>8</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -240,6 +259,7 @@
                         <descricao_cor translate="label comment">
                             <label>Product Description Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -268,6 +288,7 @@
                         <imagem_borda_cor translate="label comment">
                             <label>Image Border Color</label>
                             <frontend_type>text</frontend_type>
+							<validate>color</validate>
                             <sort_order>14</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>

@@ -97,24 +97,24 @@
     <default>
         <buscaautocompletar>
             <definicoes>
-                <borda_cor>#ccc</borda_cor>
+                <borda_cor>ccc</borda_cor>
                 <borda_largura>1</borda_largura>
-                <hover_fundo>#fff</hover_fundo>
+                <hover_fundo>fff</hover_fundo>
             </definicoes>
             <sugestao>
                 <ativo>1</ativo>
-                <sugestao_cor>#fff</sugestao_cor>
-                <background>#3399cc</background>
-                <total_cor>#fff</total_cor>
+                <sugestao_cor>fff</sugestao_cor>
+                <background>3399cc</background>
+                <total_cor>fff</total_cor>
             </sugestao>
             <categoria>
                 <ativa>1</ativa>
                 <number_category>4</number_category>
                 <esconde_categoria>Default Category</esconde_categoria>
-                <background>#fff</background>                
-                <hover_fundo>#eee</hover_fundo>
-                <titulo_cor>#333</titulo_cor>
-                <total_cor>#fff</total_cor>
+                <background>fff</background>                
+                <hover_fundo>eee</hover_fundo>
+                <titulo_cor>333</titulo_cor>
+                <total_cor>fff</total_cor>
             </categoria>
             <resultado>
                 <ativo>1</ativo>
@@ -123,14 +123,14 @@
                 <exibir_nome>1</exibir_nome>
                 <exibir_descricao>1</exibir_descricao>
                 <qtd_descricao>100</qtd_descricao>
-                <descricao_cor>#888</descricao_cor>
-                <background>#fff</background>
-                <titulo_cor>#555</titulo_cor>
+                <descricao_cor>888</descricao_cor>
+                <background>fff</background>
+                <titulo_cor>555</titulo_cor>
                 <titulo_tamanho>14</titulo_tamanho>
                 <imagem_largura>50</imagem_largura>
                 <imagem_altura>50</imagem_altura>
                 <imagem_borda_largura>1</imagem_borda_largura>
-                <imagem_borda_cor>#ddd</imagem_borda_cor>
+                <imagem_borda_cor>ddd</imagem_borda_cor>
             </resultado>
         </buscaautocompletar>
     </default>

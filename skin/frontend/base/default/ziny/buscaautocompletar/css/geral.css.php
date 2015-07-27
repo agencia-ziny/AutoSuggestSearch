@@ -38,16 +38,16 @@ header("Content-type: text/css; charset: UTF-8");
     border:solid <?php echo $config['borda_largura']; ?>px
 }
 ._autobuscacompletar ._sugestoes {
-    background-color:<?php echo $sugere['background']; ?>;
+    background-color:#<?php echo $sugere['background']; ?>;
 }
 ._autobuscacompletar ._sugestao { 
-    color:<?php echo $sugere['sugestao_cor']; ?>
+    color:#<?php echo $sugere['sugestao_cor']; ?>
 }
 ._autobuscacompletar ._sugestao ._total {
-    color:<?php echo $sugere['total_cor']; ?>
+    color:#<?php echo $sugere['total_cor']; ?>
 }
 ._autobuscacompletar ._resultado { 
-    background-color:<?php echo $result['background']; ?>
+    background-color:#<?php echo $result['background']; ?>
 }
 ._autobuscacompletar ._resultado:after {
     content: "";
@@ -55,36 +55,36 @@ header("Content-type: text/css; charset: UTF-8");
     clear: both;
 }
 ._autobuscacompletar ._resultado a span._titulo, ._autobuscacompletar ._resultado a {
-    color:<?php echo $result['titulo_cor']; ?>
+    color:#<?php echo $result['titulo_cor']; ?>
 }
 ._autobuscacompletar ._resultado span._descricao {
-    color:<?php echo $result['descricao_cor']; ?>
+    color:#<?php echo $result['descricao_cor']; ?>
 }
 ._autobuscacompletar ._resultado img {
     float:left;
     margin:3px 6px 3px 0;
-    border:solid <?php echo $result['imagem_borda_largura']; ?>px <?php echo $result['imagem_borda_cor']; ?>
+    border:solid <?php echo $result['imagem_borda_largura']; ?>px #<?php echo $result['imagem_borda_cor']; ?>
 }
 ._autobuscacompletar li.selected, ._autobuscacompletar li:hover {
-    background-color:<?php echo $config['hover_fundo']; ?>;
+    background-color:#<?php echo $config['hover_fundo']; ?>;
     text-decoration:none
 }
 ._autobuscacompletar ._total {
     float: right;
 }
 ._autobuscacompletar li._categoria a span._titulo, ._autobuscacompletar li._categoria a {
-    color:<?php echo $catego['titulo_cor']; ?>;
+    color:#<?php echo $catego['titulo_cor']; ?>;
     text-decoration:none
 }
 ._autobuscacompletar li._categoria ._total {
-    color:<?php echo $catego['total_cor']; ?>
+    color:#<?php echo $catego['total_cor']; ?>
 }
 ._autobuscacompletar li._categoria {
-    background-color:<?php echo $catego['hover_fundo']; ?>
+    background-color:#<?php echo $catego['hover_fundo']; ?>
 }
 ._autobuscacompletar li._categoria {
-    background-color:<?php echo $catego['background']; ?>
+    background-color:#<?php echo $catego['background']; ?>
 }
 ._autobuscacompletar li._categoria.selected, ._autobuscacompletar li._categoria:hover {
-    background-color:<?php echo $catego['hover_fundo']; ?>
+    background-color:#<?php echo $catego['hover_fundo']; ?>
 }
