@@ -19,17 +19,17 @@
 -->
 <config>
     <tabs>
-        <buscaautocompletar translate="label" module="buscaautocompletar">
-            <label>Auto Suggest Search</label>
+        <ziny translate="label">
+            <label>Ziny Extensions</label>
             <sort_order>202</sort_order>
-        </buscaautocompletar>
+        </ziny>
     </tabs>
     <sections>
         <buscaautocompletar translate="label" module="buscaautocompletar">
-            <label>Settings</label>
-            <tab>buscaautocompletar</tab>
+            <label>Auto Suggest Search</label>
+            <tab>ziny</tab>
             <frontend_type>text</frontend_type>
-            <sort_order>100</sort_order>
+            <sort_order>1</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Botão de Compra Flutuante
+ * Busca Auto Completar
  *
  * NOTICE OF LICENSE
  *
@@ -17,7 +17,7 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="1.1.0">
+<layout version="1.0.5">
     <adminhtml_system_config_edit>
         <reference name="head">
             <action method="addJs" ifconfig="buscaautocompletar/definicoes/ativo">

@@ -17,7 +17,7 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="1.0.3">
+<layout version="1.0.5">
     <default>
         <reference name="head">
             <action method="addCss" ifconfig="buscaautocompletar/definicoes/ativo">
